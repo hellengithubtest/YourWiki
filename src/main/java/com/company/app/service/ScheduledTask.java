@@ -1,11 +1,13 @@
 package com.company.app.service;
 
 import com.company.app.beans.MyBean;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @Component
 public class ScheduledTask {
@@ -27,5 +29,6 @@ public class ScheduledTask {
     @Scheduled(fixedDelay = 1000)
     public void run() {
         System.out.println(myBean.getText());
+        //log.info(myBean.getText());
     }
 }
