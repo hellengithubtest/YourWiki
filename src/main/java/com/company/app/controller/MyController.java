@@ -43,6 +43,6 @@ public class MyController {
     @RequestMapping(value= "/test", method = RequestMethod.POST)
     public String outValue(HttpServletRequest request) {
         task.changeText(request.getParameter("fname"));
-        return "redirect:welcomePage";
+        return "registration";
     }
 }

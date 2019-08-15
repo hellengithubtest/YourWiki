@@ -10,10 +10,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employees")
 public class Employee {
-
+    @Column
     private long id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @Column
     private String emailId;
 
     public Employee() {
